@@ -1,20 +1,27 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/bind/bind",
-    "pages/qa/qa",
-    "pages/qa-detail/qa-detail",
-    "pages/party/party",
-    "pages/party-upload/party-upload",
-    "pages/notice/notice",
-    "pages/notice-detail/notice-detail",
-    "pages/ticket/ticket",
-    "pages/ticket-create/ticket-create",
-    "pages/ticket-detail/ticket-detail"
+    "pages/me/me"
   ],
   "window": {
     "navigationBarTitleText": "学院学生综合服务",
     "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#1677ff",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的"
+      }
+    ]
   }
 }

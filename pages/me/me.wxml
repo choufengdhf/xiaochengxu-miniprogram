@@ -1,0 +1,45 @@
+<view class="card">
+  <view class="title">我的</view>
+  <view class="muted" style="margin-top:10rpx;">在此完成登录与学号绑定</view>
+</view>
+
+<!-- 已绑定：显示信息 -->
+<view class="card" wx:if="{{userBound}}">
+  <view style="font-weight:600;">已绑定</view>
+  <view class="muted" style="margin-top:10rpx;">姓名：{{user.name}}</view>
+  <view class="muted">学号：{{user.studentNo}}</view>
+  <view class="muted">专业：{{user.major || '-'}}</view>
+
+  <view class="btn-ghost" style="margin-top:16rpx;" bindtap="logout">退出登录</view>
+</view>
+
+<!-- 未绑定：先微信登录拿 token，再填写绑定信息 -->
+<view class="card" wx:else>
+  <view style="font-weight:600;">未绑定学号</view>
+
+  <view class="btn" style="margin-top:12rpx;" bindtap="doWxLogin">
+    微信登录（获取令牌）
+  </view>
+
+  <view class="muted" style="margin-top:12rpx;" wx:if="{{!hasToken}}">
+    提示：请先点击上面的“微信登录”，成功后再绑定学号。
+  </view>
+
+  <view style="margin-top:16rpx;">
+    <input class="input" placeholder="学号" value="{{studentNo}}" bindinput="onStudentNo" />
+  </view>
+  <view style="margin-top:12rpx;">
+    <input class="input" placeholder="姓名" value="{{name}}" bindinput="onName" />
+  </view>
+  <view style="margin-top:12rpx;">
+    <input class="input" placeholder="专业（可选）" value="{{major}}" bindinput="onMajor" />
+  </view>
+
+  <view class="btn-ghost" style="margin-top:16rpx;" bindtap="bindStudent" wx:if="{{hasToken}}">
+    提交绑定
+  </view>
+
+  <view class="muted" style="margin-top:12rpx;" wx:if="{{debugMsg}}">
+    {{debugMsg}}
+  </view>
+</view>
