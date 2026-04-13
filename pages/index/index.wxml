@@ -1,0 +1,38 @@
+<view class="card">
+  <view class="title">一站式服务门户</view>
+  <view class="muted" style="margin-top:10rpx;">智能问答 / 党团流程 / 通知 / 申请办理</view>
+</view>
+
+<view class="card">
+  <view class="row" style="margin-bottom:16rpx;">
+    <view class="title" style="font-size:30rpx;">快捷入口</view>
+    <view class="muted" bindtap="onRefresh">刷新</view>
+  </view>
+
+  <view style="display:flex; flex-wrap:wrap;">
+    <view style="width:50%; padding:10rpx;">
+      <view class="btn" bindtap="goQa">智能问答</view>
+    </view>
+    <view style="width:50%; padding:10rpx;">
+      <view class="btn" bindtap="goParty">党团流程</view>
+    </view>
+    <view style="width:50%; padding:10rpx;">
+      <view class="btn" bindtap="goNotice">通知公告</view>
+    </view>
+    <view style="width:50%; padding:10rpx;">
+      <view class="btn" bindtap="goTicket">证明/审批</view>
+    </view>
+  </view>
+</view>
+
+<view class="card" wx:if="{{user}}">
+  <view class="title" style="font-size:30rpx;">我的信息</view>
+  <view class="muted" style="margin-top:10rpx;">姓名：{{user.name || '-'}}</view>
+  <view class="muted">学号：{{user.studentNo || '-'}}</view>
+  <view class="muted">专业：{{user.major || '-'}}</view>
+</view>
+
+<view class="card" wx:else>
+  <view class="muted">未绑定学号</view>
+  <view class="btn" style="margin-top:12rpx;" bindtap="goBind">去绑定</view>
+</view>

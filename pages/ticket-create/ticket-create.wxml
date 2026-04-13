@@ -1,0 +1,14 @@
+<view class="card">
+  <view class="title">选择类型</view>
+  <picker mode="selector" range="{{types}}" range-key="name" bindchange="onTypeChange">
+    <view class="input" style="margin-top:12rpx;">
+      {{selectedType ? selectedType.name : '点击选择类型'}}
+    </view>
+  </picker>
+
+  <view style="margin-top:16rpx;">
+    <input class="input" placeholder="事由" value="{{reason}}" bindinput="onReason"/>
+  </view>
+
+  <view class="btn" style="margin-top:16rpx;" bindtap="submit">提交申请</view>
+</view>

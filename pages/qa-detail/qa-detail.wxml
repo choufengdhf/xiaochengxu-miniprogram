@@ -1,0 +1,18 @@
+<view class="card" wx:if="{{item}}">
+  <view class="title">{{item.title}}</view>
+  <view class="muted" style="margin-top:10rpx;">分类：{{item.categoryName || '-'}}</view>
+
+  <view style="margin-top:16rpx; font-weight:600;">标准答案</view>
+  <view style="margin-top:10rpx; line-height:1.7;">{{item.answer}}</view>
+
+  <view wx:if="{{item.policyUrl}}" style="margin-top:16rpx;">
+    <view class="btn-ghost" bindtap="openPolicy">查看政策原文</view>
+  </view>
+
+  <view wx:if="{{item.attachments && item.attachments.length>0}}" style="margin-top:16rpx;">
+    <view style="font-weight:600;">附件/模板</view>
+    <view wx:for="{{item.attachments}}" wx:key="id" style="margin-top:10rpx;">
+      <view class="btn" bindtap="download" data-id="{{item.id}}">下载：{{item.filename}}</view>
+    </view>
+  </view>
+</view>

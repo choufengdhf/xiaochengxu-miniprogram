@@ -1,0 +1,15 @@
+<view class="card" wx:if="{{progress}}">
+  <view class="title">我的进度</view>
+  <view class="muted" style="margin-top:10rpx;">当前节点：{{progress.currentNodeName}}</view>
+  <view class="muted">下一节点：{{progress.nextNodeName || '—'}}</view>
+
+  <view style="margin-top:16rpx; font-weight:600;">时间线</view>
+  <view style="margin-top:10rpx;">
+    <view wx:for="{{progress.timeline}}" wx:key="nodeId" style="padding:12rpx 0; border-bottom:1rpx solid #eee;">
+      <view>{{item.nodeName}} <text class="muted">（{{item.status}}）</text></view>
+      <view class="muted" wx:if="{{item.time}}">{{item.time}}</view>
+    </view>
+  </view>
+
+  <view class="btn" style="margin-top:16rpx;" bindtap="goUpload">提交阶段材料</view>
+</view>

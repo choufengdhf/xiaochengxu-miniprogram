@@ -1,0 +1,30 @@
+<view class="card">
+  <input class="input" placeholder="输入关键词检索政策/流程" value="{{q}}" bindinput="onQ"/>
+  <view class="btn" style="margin-top:12rpx;" bindtap="onSearch">搜索</view>
+</view>
+
+<view class="card">
+  <view class="row">
+    <view class="title" style="font-size:30rpx;">热门问题</view>
+    <view class="muted" bindtap="loadHot">换一批</view>
+  </view>
+  <view style="margin-top:12rpx;">
+    <view wx:for="{{hot}}" wx:key="id" style="padding:14rpx 0; border-bottom:1rpx solid #eee;" bindtap="openDetail" data-id="{{item.id}}">
+      <view>{{item.title}}</view>
+      <view class="muted" style="margin-top:6rpx;">{{item.summary}}</view>
+    </view>
+  </view>
+</view>
+
+<view class="card" wx:if="{{list.length>0}}">
+  <view class="title" style="font-size:30rpx;">搜索结果</view>
+  <view style="margin-top:12rpx;">
+    <view wx:for="{{list}}" wx:key="id" style="padding:14rpx 0; border-bottom:1rpx solid #eee;" bindtap="openDetail" data-id="{{item.id}}">
+      <view>{{item.title}}</view>
+      <view class="muted" style="margin-top:6rpx;">{{item.summary}}</view>
+      <view style="margin-top:8rpx;">
+        <text class="tag" wx:for="{{item.tags}}" wx:key="*this">{{item}}</text>
+      </view>
+    </view>
+  </view>
+</view>

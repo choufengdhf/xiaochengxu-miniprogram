@@ -1,0 +1,13 @@
+<view class="card">
+  <view class="title">提交材料</view>
+  <view class="muted" style="margin-top:10rpx;">选择文件后上传并提交记录（示例：思想汇报 PDF/Word）</view>
+
+  <view style="margin-top:16rpx;">
+    <input class="input" placeholder="材料说明（如：2026年4月思想汇报）" value="{{remark}}" bindinput="onRemark"/>
+  </view>
+
+  <view class="btn-ghost" style="margin-top:12rpx;" bindtap="chooseFile">选择文件</view>
+  <view class="muted" style="margin-top:10rpx;" wx:if="{{fileName}}">已选：{{fileName}}</view>
+
+  <view class="btn" style="margin-top:16rpx;" bindtap="submit" wx:if="{{filePath}}">上传并提交</view>
+</view>

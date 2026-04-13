@@ -1,0 +1,12 @@
+<view class="card" wx:if="{{item}}">
+  <view class="title">{{item.typeName}}</view>
+  <view class="muted" style="margin-top:10rpx;">状态：{{item.status}}</view>
+  <view class="muted">发起时间：{{item.createTime}}</view>
+  <view style="margin-top:16rpx;">事由：{{item.reason}}</view>
+
+  <view style="margin-top:16rpx; font-weight:600;">日志</view>
+  <view wx:for="{{item.logs}}" wx:key="time" style="padding:12rpx 0; border-bottom:1rpx solid #eee;">
+    <view>{{item.action}}</view>
+    <view class="muted">{{item.time}} · {{item.by}}</view>
+  </view>
+</view>

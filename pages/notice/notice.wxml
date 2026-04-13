@@ -1,0 +1,19 @@
+<view class="card">
+  <view class="row">
+    <view class="title" style="font-size:30rpx;">通知列表</view>
+    <view class="muted" bindtap="reload">刷新</view>
+  </view>
+
+  <view style="margin-top:12rpx;">
+    <view wx:for="{{items}}" wx:key="id" style="padding:14rpx 0; border-bottom:1rpx solid #eee;" bindtap="open" data-id="{{item.id}}">
+      <view class="row">
+        <view>{{item.title}}</view>
+        <view class="muted">{{item.pinned ? '置顶' : ''}}</view>
+      </view>
+      <view class="muted" style="margin-top:6rpx;">{{item.publishTime}}</view>
+      <view style="margin-top:8rpx;">
+        <text class="tag" wx:for="{{item.tags}}" wx:key="*this">{{item}}</text>
+      </view>
+    </view>
+  </view>
+</view>
