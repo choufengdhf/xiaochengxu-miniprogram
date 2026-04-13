@@ -1,6 +1,66 @@
-<view class="card">
-  <view class="title">首页</view>
-  <view class="muted" style="margin-top:10rpx;">
-    这里后续放：智能问答、党团流程、通知、证明审批等入口。
+<view class="hero">
+  <view class="hero-title">学院学生综合服务</view>
+  <view class="hero-sub">一站式办理 · 政策查询 · 流程跟踪</view>
+</view>
+
+<view class="section">
+  <view class="section-title">核心入口</view>
+
+  <view class="grid">
+    <view class="grid-item" bindtap="go" data-to="qa">
+      <view class="icon icon-qa">问</view>
+      <view class="name">智能问答</view>
+      <view class="desc">政策检索 / 模板下载</view>
+    </view>
+
+    <view class="grid-item" bindtap="go" data-to="party">
+      <view class="icon icon-party">团</view>
+      <view class="name">党团流程</view>
+      <view class="desc">进度轴 / 材料提交</view>
+    </view>
+
+    <view class="grid-item" bindtap="go" data-to="notice">
+      <view class="icon icon-notice">通</view>
+      <view class="name">通知公告</view>
+      <view class="desc">分类查看 / 已读标记</view>
+    </view>
+
+    <view class="grid-item" bindtap="go" data-to="ticket">
+      <view class="icon icon-ticket">证</view>
+      <view class="name">证明审批</view>
+      <view class="desc">在线申请 / 进度追踪</view>
+    </view>
   </view>
+</view>
+
+<view class="section">
+  <view class="section-title">常用功能</view>
+
+  <view class="list">
+    <view class="list-item" bindtap="goMe">
+      <view class="left">
+        <view class="dot"></view>
+        <view>
+          <view class="li-title">登录与学号绑定</view>
+          <view class="li-desc">在“我的”页面完成登录和绑定</view>
+        </view>
+      </view>
+      <view class="right">></view>
+    </view>
+
+    <view class="list-item" bindtap="comingSoon" data-name="个人画像">
+      <view class="left">
+        <view class="dot"></view>
+        <view>
+          <view class="li-title">个人画像</view>
+          <view class="li-desc">荣誉 / 实践 / 基础信息（可扩展）</view>
+        </view>
+      </view>
+      <view class="right">></view>
+    </view>
+  </view>
+</view>
+
+<view class="footer">
+  <view class="muted">提示：如入口尚未实现，会提示“未实现”。</view>
 </view>

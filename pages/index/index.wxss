@@ -1,1 +1,115 @@
-/* empty */
+.hero{
+  margin: 20rpx;
+  padding: 30rpx;
+  border-radius: 16rpx;
+  background: linear-gradient(135deg, #1677ff 0%, #3aa0ff 50%, #6cb6ff 100%);
+  color: #fff;
+}
+.hero-title{
+  font-size: 40rpx;
+  font-weight: 700;
+}
+.hero-sub{
+  margin-top: 10rpx;
+  font-size: 26rpx;
+  opacity: 0.9;
+}
+
+.section{
+  margin: 20rpx;
+  padding: 22rpx;
+  border-radius: 16rpx;
+  background: #fff;
+}
+.section-title{
+  font-size: 30rpx;
+  font-weight: 700;
+  margin-bottom: 16rpx;
+}
+
+.grid{
+  display: flex;
+  flex-wrap: wrap;
+}
+.grid-item{
+  width: 50%;
+  padding: 12rpx;
+  box-sizing: border-box;
+}
+.grid-item > view{
+  text-align: center;
+}
+.grid-item{
+  border-radius: 14rpx;
+}
+.grid-item::after{
+  content: "";
+  display: block;
+}
+
+.icon{
+  width: 86rpx;
+  height: 86rpx;
+  border-radius: 18rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12rpx auto;
+  font-size: 34rpx;
+  color: #fff;
+  font-weight: 700;
+}
+.icon-qa{ background: #6c5ce7; }
+.icon-party{ background: #00b894; }
+.icon-notice{ background: #e17055; }
+.icon-ticket{ background: #0984e3; }
+
+.name{
+  font-size: 28rpx;
+  font-weight: 700;
+}
+.desc{
+  margin-top: 6rpx;
+  font-size: 24rpx;
+  color: #666;
+}
+
+.list{
+  margin-top: 6rpx;
+}
+.list-item{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding: 18rpx 6rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+.left{
+  display:flex;
+  align-items:flex-start;
+}
+.dot{
+  width: 14rpx;
+  height: 14rpx;
+  border-radius: 50%;
+  background: #1677ff;
+  margin: 12rpx 16rpx 0 6rpx;
+}
+.li-title{
+  font-size: 28rpx;
+  font-weight: 700;
+}
+.li-desc{
+  margin-top: 6rpx;
+  font-size: 24rpx;
+  color:#666;
+}
+.right{
+  color:#bbb;
+  font-size: 30rpx;
+}
+
+.footer{
+  margin: 10rpx 20rpx 30rpx 20rpx;
+  text-align: center;
+}
